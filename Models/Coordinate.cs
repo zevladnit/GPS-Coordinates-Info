@@ -1,23 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics.Tracing;
 using System.Linq;
 
-namespace GPSCoordinateInfo.SQLiteModel
+namespace GPSCIService.Models
 {
-    public class ModelContext : DbContext
-    {
-        public DbSet<Coordinate> Coordinates { get; set; }
-        public DbSet<TwoCoordinate> TwoCoordinates { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source=blogging.db");
-        }
-    }
-
     public class Coordinate : Point
     {
         [Key]
@@ -25,6 +11,7 @@ namespace GPSCoordinateInfo.SQLiteModel
         public string AddressCounry { get; set; }
         public string AddressCity { get; set; }
         public string AddressRegiin { get; set; }
+        public bool status { get; set; }
 
         public override string ToString()
         {
