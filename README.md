@@ -3,22 +3,24 @@ Service getting information GPS coordinates
 An example of using web API with microservice template elements and information about file storage.
 Target: takes a pair of GPS coordinates calculates the distance between them and finds their address.
 
-##Use
+## Use
 Start service.
 
 Send
 
-##POST */api/coordinate
+## POST */api/coordinate
 
+```JSON
 [
   { "x": 30.315868, "y": 59.939095 },
   { "x": 59.939095, "y": 59.939095 },
   { "x": 31.269915, "y": 58.522810 },
   { "x": -0.127660, "y": 51.507351 }
 ]
+```
+## GET */api/coordinate
 
-##GET */api/coordinate
-
+```JSON
 [
     {
         "idCoordinate": 1,
@@ -46,7 +48,7 @@ Send
         "status": true,
         "x": 31.2699146,
         "y": 58.52281
-    },
+    }
     {
         "idCoordinate": 4,
         "addressCounry": "Великобритания",
@@ -57,9 +59,10 @@ Send
         "y": 51.50735
     }
 ]
+```
+## JSON File:
 
-##JSON File:
-
+```JSON
 [
   {
     "distance":1636644.88,
@@ -108,3 +111,4 @@ Send
       }
   }
 ]
+```
