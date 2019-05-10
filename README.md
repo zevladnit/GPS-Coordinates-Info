@@ -6,9 +6,8 @@ Target: takes a pair of GPS coordinates calculates the distance between them and
 ## Use
 Start service.
 
-Send
-
-## POST */api/coordinate
+## Send
+### ```HTTP POST */api/coordinate ```
 
 ```JSON
 [
@@ -18,7 +17,8 @@ Send
   { "x": -0.127660, "y": 51.507351 }
 ]
 ```
-## GET */api/coordinate
+## Get
+### ```HTTP GET */api/coordinate ```
 
 ```JSON
 [
@@ -60,7 +60,8 @@ Send
     }
 ]
 ```
-## JSON File:
+## Result
+### JSON File:
 
 ```JSON
 [
